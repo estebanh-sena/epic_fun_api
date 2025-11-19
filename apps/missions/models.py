@@ -57,6 +57,7 @@ class Mission(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)  # Creation timestamp
     updated_at = models.DateTimeField(auto_now=True)  # Last update timestamp
+    student_name = models.CharField(max_length=250, default=None)
 
     def __str__(self) -> str:
         return f"{self.title} ({self.difficulty})"

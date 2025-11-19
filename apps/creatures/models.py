@@ -29,6 +29,7 @@ class Creature(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    student_name = models.CharField(max_length=250, default=None)
 
     def __str__(self) -> str:
         return f"{self.name} ({self.rarity})"

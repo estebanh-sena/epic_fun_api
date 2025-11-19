@@ -21,6 +21,7 @@ class Invention(models.Model):
     for_students = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    student_name = models.CharField(max_length=250, default=None)
 
     def __str__(self):
         return f"{self.name} (Usefulness: {self.usefulness_level}, Danger: {self.danger_level})"

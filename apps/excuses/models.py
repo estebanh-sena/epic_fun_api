@@ -21,6 +21,7 @@ class Excuse(models.Model):
     times_used = models.PositiveBigIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    student_name = models.CharField(max_length=250, default=None)
 
     def __str__(self):
         return f"{self.title} ({self.category})"
