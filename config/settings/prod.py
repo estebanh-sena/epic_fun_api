@@ -8,7 +8,9 @@ if not SECRET_KEY:
     raise ValueError("SECRET_KEY environment variable must be set in production")
 
 # Additional production-specific settings can be added here
-SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# SECURE_SSL_REDIRECT = True
+USE_X_FORWARDED_HOST = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
@@ -24,7 +26,8 @@ DATABASES = {
 }
 
 STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+# STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 SECURE_HSTS_SECONDS = 31536000
