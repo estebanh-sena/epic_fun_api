@@ -14,5 +14,6 @@ class InventionSerializer(serializers.ModelSerializer):
             "for_students",
             "created_at",
             "updated_at",
+            "student_name",
         ]
         read_only_fields = ["id", "created_at", "updated_at"]

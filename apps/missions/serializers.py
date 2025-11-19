@@ -24,6 +24,7 @@ class MissionSerializer(serializers.ModelSerializer):
             "times_completed",
             "created_at",
             "updated_at",
+            "student_name",
         ]
         read_only_fields = [
             "id",

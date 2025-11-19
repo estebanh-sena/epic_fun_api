@@ -19,5 +19,6 @@ class CreatureSerializer(serializers.ModelSerializer):
             "favorite_invention",
             "created_at",
             "updated_at",
+            "student_name",
         ]
         read_only_fields = ["id", "created_at", "updated_at"]
